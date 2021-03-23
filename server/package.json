@@ -1,0 +1,31 @@
+{
+  "name": "head-2-head-chess",
+  "version": "1.0.0",
+  "description": "Head 2 Head Chess Web Application",
+  "main": "index.js",
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "@types/mongodb": "^3.6.10",
+    "@types/node": "^14.14.35",
+    "@types/nodemon": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.5",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reffix/Head2HeadChess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reffix/Head2HeadChess/issues"
+  },
+  "homepage": "https://github.com/Reffix/Head2HeadChess#readme"
+}
