@@ -2,7 +2,7 @@
   "name": "head-2-head-chess",
   "version": "1.0.0",
   "description": "Head 2 Head Chess Web Application",
-  "main": "index.js",
+  "main": "index.ts",
   "dependencies": {
     "@types/express": "^4.17.11",
     "@types/mongodb": "^3.6.10",
