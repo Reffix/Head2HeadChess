@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invite Room</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container-login">
+        <div id="title">
+            <img src="resources/logo.png" class = "logo">          
+            Invite Room
+        </div>
+
+        <form>    
+            <div id="playfriend">
+                Play with friend
+            </div>       
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="Type friend's username" type="text" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <input type="submit" value="Invite" />
+
+            <div id="callaspectator">
+                Call a spectator
+            </div>       
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="Type spectators's username" type="text" autocomplete="off">
+            </div>
+
+            <input type="submit" value="Call" />
+
+
+        </form>
+
+        <div class="returnhome">
+            Return to home? 
+            <a href="#"><button id="returnhome-link">Go back</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
