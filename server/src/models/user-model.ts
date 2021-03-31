@@ -7,6 +7,7 @@ export interface User extends Document{
     username: string,
     email: string,
     password: string,
+    authToken: string,
     games: Game[],
     createDate: Date,
 }
@@ -30,6 +31,10 @@ const UserSchema : Schema<User> = new Schema({
         type: String,
         required: true
     },
+    authToken: {
+        type: String,
+        required: true,
+    },
     createDate: { 
         type: Date,
         default: Date.now() 
@@ -38,6 +43,7 @@ const UserSchema : Schema<User> = new Schema({
         ref: 'Game',
         type: Schema.Types.ObjectId,
     }],
+
 });
 
 UserSchema.pre('save', async function (this: User, next: (err?: Error | undefined) => void) {
