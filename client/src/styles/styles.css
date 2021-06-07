@@ -1,7 +1,11 @@
-body  { background-color: #f8f8f8; }
+body  { margin: 0;
+        padding: 0;
+        font-family: 'Noto Serif', serif;
+        color: #F2F2F2;
+        background-image: url("../resources/chess.jpg");}
 table { border-collapse: collapse; }
 
-#banner { background-color: #ffffff; }
+#banner { background-color: #000000; }
 
 #startForm, #joinForm { padding: 15px; }
 
