@@ -1,0 +1,55 @@
+
+
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    |     
+    title Register
+    |     
+    link(rel='stylesheet', href='/css/loginAndRegister.css')
+    |     
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    |     
+    style.
+      body {
+      background-color: #303641;
+      }
+  body
+    #container-register
+      #title
+        img.logo(src='../img/logo.png')
+        |             Registration
+      |         
+      form
+        .input
+          .input-addon
+            i.material-icons email
+          |                 
+          input#email.validate(placeholder='Email', type='email', required='', autocomplete='off')
+        |             
+        .clearfix
+        |             
+        .input
+          .input-addon
+            i.material-icons face
+          |                 
+          input#username.validate(placeholder='Username', type='text', required='', autocomplete='off')
+        |             
+        .clearfix
+        |             
+        .input
+          .input-addon
+            i.material-icons vpn_key
+          |                 
+          input#password.validate(placeholder='Password', type='password', required='', autocomplete='off')
+        |             
+        input(type='submit', value='Register')
+      |         
+      .register
+        | Do you already have an account?
+        a(href='/login')
+          button#register-link Log in here

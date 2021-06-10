@@ -66,14 +66,26 @@ var validateJoinGame = function (req) {
   };
 };
 
-var inviteroom = function (req, res) {
-  res.render("inviteroom");
+var home = function (req, res) {
+  res.render("home");
 };
+
+var homepage = function(req, res) {
+  res.render("homepage");
+}
+
+var login = function(req, res) {
+  res.render("login");
+}
+
+var register = function(req, res) {
+  res.render("register");
+}
 
 var game = function (req, res) {
   var validData = validateGame(req);
   if (!validData) {
-    res.redirect("/");
+    res.redirect("/home");
     return;
   }
 
@@ -83,13 +95,13 @@ var game = function (req, res) {
 var startGame = function (req, res) {
   req.session.regenerate(function (err) {
     if (err) {
-      res.redirect("/");
+      res.redirect("/home");
       return;
     }
 
     var validData = validateStartGame(req);
     if (!validData) {
-      res.redirect("/");
+      res.redirect("/home");
       return;
     }
 
@@ -106,19 +118,19 @@ var startGame = function (req, res) {
 var joinGame = function (req, res) {
   req.session.regenerate(function (err) {
     if (err) {
-      res.redirect("/");
+      res.redirect("/home");
       return;
     }
 
     var validData = validateJoinGame(req);
     if (!validData) {
-      res.redirect("/");
+      res.redirect("/home");
       return;
     }
 
     var game = DB.find(validData.gameID);
     if (!game) {
-      res.redirect("/");
+      res.redirect("/home");
       return;
     }
 
@@ -135,15 +147,18 @@ var joinGame = function (req, res) {
 };
 
 var invalid = function (req, res) {
-  res.redirect("/");
+  res.redirect("/home");
 };
 
 exports.attach = function (app, db) {
   DB = db;
 
-  app.get("/inviteroom", inviteroom);
-  app.get("/game/:id", game);
-  app.post("/start", startGame);
-  app.post("/join", joinGame);
-  app.all("*", invalid);
+  app.get('/', homepage);
+  app.get('/login', login);
+  app.get('/register', register);
+  app.get('/home', home);
+  app.get('/game/:id', game);
+  app.post('/start', startGame);
+  app.post('/join', joinGame);
+  app.all('*', invalid);
 };

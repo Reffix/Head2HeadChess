@@ -1,0 +1,53 @@
+
+
+doctype html
+html(lang='eng')
+  head
+    title Head2HeadChess
+    |       
+    meta(charset='utf-8')
+    |       
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |       
+    link(href='/css/homepage.css', rel='stylesheet')
+  |     
+  body
+    header
+      #myNav.overlay
+        a.closebtn(href='javascript:void(0)', onclick='closeNav()') &times;
+        |           
+        .overlay-content
+          a(href='/') Home
+          |             
+          a(href='/login') Login
+          |             
+          a(href='/register') Register
+      |         
+      span(style='font-size: 30px; color: white; cursor: pointer', onclick='openNav()')
+        | &#x2630;
+      |         
+      .my-header
+        h1
+          img.logo(src='../img/logo.png')
+          |             Head2HeadChess
+    |       
+    .main-text
+      h1 Are you ready to play chess?
+      |         
+      h2 Invite your friends and let&apos;s get started!
+      a(href='/home')        
+        button.button Start your game!
+      |  
+      br
+    |       
+    script.
+      function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+      }
+      function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+      }
+
+
+
+

@@ -1,0 +1,14 @@
+{
+  "name": "Head2HeadChess",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "3.3.x",
+    "jade": "0.33.x",
+    "socket.io": "^0.9.19",
+    "underscore": "1.5.x"
+  }
+}

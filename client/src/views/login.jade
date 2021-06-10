@@ -1,0 +1,43 @@
+
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    |     
+    title Login
+    |     
+    link(rel='stylesheet', href='/css/loginAndRegister.css')
+    |     
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+  body
+    #container-login
+      #title
+        img.logo(src='../img/logo.png')
+        |             Login
+      |         
+      form
+        .input
+          .input-addon
+            i.material-icons face
+          |                 
+          input#username.validate(placeholder='Username', type='text', required='', autocomplete='off')
+        |             
+        .clearfix
+        |             
+        .input
+          .input-addon
+            i.material-icons vpn_key
+          |                 
+          input#password.validate(placeholder='Password', type='password', required='', autocomplete='off')
+        |             
+        input(type='submit', value='Log In')
+      |         
+      .register
+        | Don&apos;t have an account yet?
+        a(href='/register')
+          button#register-link Register here
+          
+

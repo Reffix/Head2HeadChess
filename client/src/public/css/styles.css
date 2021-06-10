@@ -1,11 +1,23 @@
-body  { margin: 0;
-        padding: 0;
-        font-family: 'Noto Serif', serif;
-        color: #F2F2F2;
-        background-image: url("../resources/chess.jpg");}
+body  { background-color: #f8f8f8; }
 table { border-collapse: collapse; }
 
-#banner { background-color: #000000; }
+body {
+  background-image: url(/img/chess.jpg);
+}
+
+#container-start {
+  background-color: #ffffff;
+  position: relative;
+  top: 200%;
+  margin: auto;
+  margin-top: 7%;
+  width: 1200px; 
+  height: 285px; 
+  border-radius: 0.35em;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
 
 #startForm, #joinForm { padding: 15px; }
 
@@ -21,14 +33,13 @@ table { border-collapse: collapse; }
   margin: 0 0 25px 0;
 }
 
-.player-info        { font-size: 16px; margin: 0 20px 0 20px;        }
+.player-info        { font-size: 16px; margin: 0 20px 0 20px;  color:white     }
 .player-info ul     { font-size: 26px; line-height: 28px; margin: 0; }
 .player-info ul li  { padding: 0;                                    }
 
 .active-player strong:before { color: #3a87ad; content: "\25b6  "; }
 
-
-#board { margin: 0 auto 0 auto; }
+#board { position: top; margin: 0 auto 0 auto; }
 
 #board .square {
   width:  40px;
@@ -72,17 +83,18 @@ table { border-collapse: collapse; }
   height: 40px;
   text-align: center;
   vertical-align: middle;
+  color:white;
 }
 
-#board .top-edge    { background: url("../resources/board-edges.png") bottom; }
-#board .right-edge  { background: url("../resources/board-edges.png") left;   }
-#board .bottom-edge { background: url("../resources/board-edges.png") top;    }
-#board .left-edge   { background: url("../resources/board-edges.png") right;  }
+#board .top-edge    { background: url("../img/board-edges.png") bottom; }
+#board .right-edge  { background: url("../img/board-edges.png") left;   }
+#board .bottom-edge { background: url("../img/board-edges.png") top;    }
+#board .left-edge   { background: url("../img/board-edges.png") right;  }
 
-#board .top-left-corner     { background: url("../resources/board-corners.png") bottom right; }
-#board .top-right-corner    { background: url("../resources/board-corners.png") bottom left;  }
-#board .bottom-right-corner { background: url("../resources/board-corners.png") top left;     }
-#board .bottom-left-corner  { background: url("../resources/board-corners.png") top right;    }
+#board .top-left-corner     { background: url("../img/board-corners.png") bottom right; }
+#board .top-right-corner    { background: url("../img/board-corners.png") bottom left;  }
+#board .bottom-right-corner { background: url("../img/board-corners.png") top left;     }
+#board .bottom-left-corner  { background: url("../img/board-corners.png") top right;    }
 
 #board .selected                        { color: #049cdb;                   }
 #board .valid-move:before               { color: #46a546; content: "\25cf"; }
@@ -90,13 +102,11 @@ table { border-collapse: collapse; }
 #board .valid-en-passant-capture:before { color: #46a546; content: "\25cf"; }
 #board .valid-castle:before             { color: #46a546; content: "\25cf"; }
 
-
 .modal-content { background-color: #f8f8f8; }
 .modal-footer  { margin-top: 0; }
 
 #pawn-promotion h3    { margin-bottom: 20px;                }
 #pawn-promotion label { font-size: 30px; line-height: 30px; }
-
 
 .black.pawn:before    { content: "\265F"; }
 .black.rook:before    { content: "\265C"; }
