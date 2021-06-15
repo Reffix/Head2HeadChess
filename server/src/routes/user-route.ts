@@ -1,5 +1,5 @@
 import express from 'express';
-import UserService from 'src/services/user-service';
+import UserService from '../services/user-service';
 
 const userRoute = express.Router();
 
@@ -16,3 +16,5 @@ userRoute.post('/register', async (request, response, next) => {
         return response.status(409).json({ error, message: error.message });
     }
 });
+
+export default userRoute;

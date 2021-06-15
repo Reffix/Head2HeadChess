@@ -53,4 +53,8 @@ export default class UserService {
 
         return await new userModel({username: passedUsername, email: passedEmail, password: passedPassword}).save();
     }
+
+    userByToken(token: string){
+        return userModel.findOne({authToken: token});
+    }
 }

@@ -1,5 +1,5 @@
 import express from 'express';
-import UserService from 'src/services/user-service';
+import UserService from '../services/user-service';
 
 const authRoute = express.Router();
 
@@ -22,3 +22,4 @@ authRoute.post('/login', async (request, response, next) => {
     }
 });
 
+export default authRoute;
